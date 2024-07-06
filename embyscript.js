@@ -1,4 +1,5 @@
-if ($request.url.indexOf('mb3admin.com/admin/service/registration/validateDevice') != -1) {
+if ($request.url.indexOf('mb3admin.com/admin/service/registration/validateDevice') != -1 || 
+    $request.url.indexOf('mb3admin.com/admin/service/registration/getStatus') != -1) {
     if ($response.status !== 200) {
         $notification.post("Emby Premiere 已激活", "", "");
         $done({
